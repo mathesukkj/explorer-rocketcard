@@ -1,4 +1,4 @@
-# Rocketcard
+# Rocketpay
 
 > Explorer
 Projeto criado durante a Explorer Lab, da Rocketseat.
