@@ -1,4 +1,5 @@
 import "./css/index.css";
+import IMask from "imask";
 
 const ccBgColor1 = document.querySelector(".cc-bg svg > g g:nth-child(1) path");
 const ccBgColor2 = document.querySelector(".cc-bg svg > g g:nth-child(2) path");
@@ -15,5 +16,10 @@ function setCardType(type) {
   ccBgColor2.setAttribute("fill", colors[type][1]);
   ccLogo.setAttribute("src", `cc-${type}.svg`);
 }
-
 globalThis.setCardType = setCardType;
+
+const CVV = document.querySelector("#security-code");
+const CVVPattern = {
+  mask: "000",
+};
+const CVVMasked = IMask(CVV, CVVPattern);
