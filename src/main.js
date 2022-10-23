@@ -100,6 +100,9 @@ CVVMasked.on("accept", () => {
 });
 
 cardNumberMasked.on("accept", () => {
+  const cardType = cardNumberMasked.masked.currentMask.cardtype;
+  setCardType(cardType);
+
   function updateCardNumber(number) {
     const ccNumber = document.querySelector(".cc-number");
     ccNumber.innerText = number.length === 0 ? "1234 5678 9012 3456" : number;
