@@ -90,3 +90,11 @@ cardHolder.addEventListener("input", () => {
   }
   // ccHolder.innerText = cardHolder.value.length === 0 ? "FULANO DA SILVA" : cardHolder.value
 });
+
+CVVMasked.on("accept", () => {
+  function updateCVV(code) {
+    const ccSecurity = document.querySelector(".cc-security .value");
+    ccSecurity.innerText = code.length === 0 ? "123" : code;
+  }
+  updateCVV(CVVMasked.value);
+});
