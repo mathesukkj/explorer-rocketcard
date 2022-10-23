@@ -98,3 +98,11 @@ CVVMasked.on("accept", () => {
   }
   updateCVV(CVVMasked.value);
 });
+
+cardNumberMasked.on("accept", () => {
+  function updateCardNumber(number) {
+    const ccNumber = document.querySelector(".cc-number");
+    ccNumber.innerText = number.length === 0 ? "1234 5678 9012 3456" : number;
+  }
+  updateCardNumber(cardNumberMasked.value);
+});
