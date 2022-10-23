@@ -66,7 +66,6 @@ const cardNumberPattern = {
     const actualMask = dynamicMasked.compiledMasks.find(({ regex }) =>
       number.match(regex)
     );
-    console.log(actualMask);
     return actualMask;
   },
 };
@@ -108,4 +107,12 @@ cardNumberMasked.on("accept", () => {
     ccNumber.innerText = number.length === 0 ? "1234 5678 9012 3456" : number;
   }
   updateCardNumber(cardNumberMasked.value);
+});
+
+expirationDateMasked.on("accept", () => {
+  function updateExpirationDate(date) {
+    const ccExpiration = document.querySelector(".cc-expiration .value");
+    ccExpiration.innerText = date.length === 0 ? "02/32" : date;
+  }
+  updateExpirationDate(expirationDateMasked.value);
 });
