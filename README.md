@@ -14,6 +14,7 @@ Projeto criado durante a Explorer Lab, da Rocketseat.
 -   Vite
 -   Node e NPM
 -   iMask
+-   RegEx
 
 ## 📸 Preview
 
